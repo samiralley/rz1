@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-	Theme Name: Site name
+	Theme Name: SiteName
 	Author Design: Samir Alley @samiralley | Tom Gooden @good3n
 	Author URI: http://www.revize.com/
 
@@ -10,14 +10,14 @@
 
 /* -----------------------------------------
 
-#Bacic Styles
+#basic styles
 
 -----------------------------------------*/ 
 body{background:#fff;font-size:14px;line-height:1.6;font-family:sans-serif;color:#444;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:100%}
 
 /* -----------------------------------------
 
-#Typography
+#typography
 
 -----------------------------------------*/ 
 h1,h2,h3,h4,h5,h6{color:#111;font-weight:normal;margin-bottom:30px;line-height:1.2}
@@ -38,16 +38,18 @@ hr{border:solid #ccc;border-width:1px 0 0;clear:both;margin:10px 0 30px;height:0
 
 /* -----------------------------------------
 
-#Links
+#links
 
 -----------------------------------------*/ 
-a,a:visited{color:#0f99ee;text-decoration:underline;outline:0!important}
+a,a:visited{color:#0f99ee;text-decoration:underline;outline:0!important;
+-webkit-transition:color .3s ease;-moz-transition:color .3s ease;-o-transition:color .3s ease;transition:color .3s ease;
+-webkit-transition:background .3s ease;-moz-transition:background .3s ease;-o-transition:background .3s ease;transition:background .3s ease}
 a:hover,a:focus{color:#0f99ee}
 p a,p a:visited{line-height:inherit}
 
 /* -----------------------------------------
 
-#Lists
+#lists
 
 -----------------------------------------*/ 
 ul,ol{margin-bottom:20px;margin-left:30px}
@@ -62,7 +64,7 @@ li p{line-height:1.3}
 
 /* -----------------------------------------
 
-#Images
+#images
 
 -----------------------------------------*/
 img{max-width:100%;height:auto}
@@ -70,22 +72,25 @@ a img{border:none}
 
 /* -----------------------------------------
 
-#Buttons
+#buttons
 
 -----------------------------------------*/ 
 .button,
+a.button,
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
 .btn{border:0;color:#fff!important;display:inline-block;font-size:12px;font-weight:900!important;text-decoration:none;cursor:pointer;line-height:normal;padding:6px 14px;vertical-align:top;font-family:"Roboto",sans-serif;border-radius:0;letter-spacing:2px;text-transform:uppercase;padding:20px 30px;background:#0f99ee;transition:background .3s}
 .button:hover,
+a.button:hover,
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .btn:hover{-webkit-box-shadow:none;-moz-box-shadow:none;-o-box-shadow:none;box-shadow:none;background:#0e8cda}
 .button:active,
+a.button:active,
 button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
@@ -96,7 +101,7 @@ input::-moz-focus-inner{border:0;padding:0}
 
 /* -----------------------------------------
 
-#Forms
+#forms
 
 -----------------------------------------*/ 
 form{margin-bottom:30px}
@@ -105,7 +110,7 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 textarea,
-select{border:1px solid #e9eaec;padding:10px 14px;outline:none;font:13px "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;color:#777;margin:0;display:inline-block;background:#fff;border-radius:0;box-shadow:none}
+select{border:1px solid #e9eaec;padding:10px 14px;outline:none;font-size:13px;font-family:sans-serif;color:#777;margin:0;display:inline-block;background:#fff;border-radius:0;box-shadow:none}
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
@@ -118,7 +123,33 @@ legend span{font-weight:normal;font-size:13px;color:#444}
 
 /* -----------------------------------------
 
-#Header + Nav + No More IE7
+#rz intranet
+
+-----------------------------------------*/ 
+form.loginform{background:#fff;padding:30px;border:1px solid #D2DFEF}
+form.loginform p{background:#E65229;color:#fff;padding:20px;line-height:1}
+form.loginform label{font-weight:normal}
+form.loginform label input{display:block;margin-bottom:10px;width:100%;box-sizing:border-box;padding:10px;color:#000}
+
+/* -----------------------------------------
+
+#rz notify
+
+-----------------------------------------*/ 
+.e-notify{font-weight:bold;font-size:12px;background:#E7DF7F;position:fixed;padding:3px 13px 2px;bottom:10px;left:10px;color:#111;border-radius:50px;text-transform:uppercase;z-index:999;overflow:hidden;box-shadow:0 0 10px rgba(0,0,0,.175)}
+.e-notify img{display:none}
+.e-notify i{margin-right:4px!important}
+.e-notify a{position:absolute;top:0;bottom:0;left:0;right:0}
+
+/* -----------------------------------------
+
+#rz edit
+
+-----------------------------------------*/
+
+/* -----------------------------------------
+
+#main
 
 -----------------------------------------*/ 
 body{overflow-x:hidden}
@@ -155,17 +186,17 @@ body{overflow-x:hidden}
 .text-overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 .floating-alert{position:fixed;z-index:99999;bottom:10px;margin:0;right:10px;border:3px solid #fff;background:#000;background:rgba(0,0,0,.9);box-shadow:0 0 10px rgba(0,0,0,.2);color:#fff;padding:30px;font-size:14px;width:350px;}
-.floating-alert h4{color:#ffc140;margin:0 0 10px;font-family:Roboto;font-weight:bold;text-transform:uppercase;font-size:18px}
-.floating-alert .btn{padding:8px 10px;margin:20px 0 0 0!important;}
-.floating-alert .close{padding:0;background:none!important;color:#fff!important;opacity:1;margin-right:20px;}
+.floating-alert h4{color:#ffc140;margin:0 0 10px;font-family:sans-serif;font-weight:bold;text-transform:uppercase;font-size:18px}
+.floating-alert .btn{padding:8px 10px;margin:20px 0 0 0!important}
+.floating-alert .close{padding:0;background:none!important;color:#fff!important;opacity:1;margin-right:20px}
 
 /* -----------------------------------------
 
-#Inner Page
+#inner
 
 -----------------------------------------*/ 
 .flyout-wrap{margin-top:100px;margin-bottom:50px}
-.flyout-wrap h3{color:#ffc140;font-family:'abraham_lincolnregular', serif;margin-bottom:40px;font-size:35px;text-transform:uppercase}
+.flyout-wrap h3{color:#ffc140;font-family:sans-serif;margin-bottom:40px;font-size:35px;text-transform:uppercase}
 .flyout{margin:0;padding:0 60px 0 0}
 .flyout li{margin:0;list-style:none;position:relative;font-size:16px;line-height:20px}
 .flyout a{text-decoration:none;color:#31a1ef;padding:14px 30px 14px 0;display:block;border-top:1px solid #e7e9ea}
@@ -173,14 +204,14 @@ body{overflow-x:hidden}
 .flyout ul{display:none;margin:0;padding:0}
 .flyout li li a{font-size:13px;padding:10px 10px 10px 10px}
 
-.bread{font-size:13px;text-transform:uppercase;font-weight:bold;color:#fff;position:absolute;bottom:30px;z-index:99;width:100%;font-family:Roboto;text-shadow:0 1px 0 #34576e}
+.bread{font-size:13px;text-transform:capitalize;font-weight:bold;color:#fff;position:absolute;bottom:30px;z-index:99;width:100%;font-family:sans-serif;text-shadow:0 1px 0 #34576e}
 .bread p{margin:0;font-size:13px}
 .bread a{color:#ffc140;text-decoration:none;font-size:13px}
 .bread i{font-size:13px;margin:0 4px}
 
 /* -----------------------------------------
 
-#Media Queries
+#media queries
 
 -----------------------------------------*/ 
 @media only screen and (min-width:992px) {
@@ -197,10 +228,10 @@ body{overflow-x:hidden}
 	/* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width:767px) {
 
-	.alert{width:auto;right:15px;left:15px}
-	.alert{font-size:12px}
-	.alert h4{margin-bottom:10px}
-	.alert .btn{font-size:10px}
+	.floating-alert{width:auto;right:15px;left:15px}
+	.floating-alert{font-size:12px}
+	.floating-alert h4{margin-bottom:10px}
+	.floating-alert .btn{font-size:10px}
 
 }
 
