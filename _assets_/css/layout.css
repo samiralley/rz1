@@ -4,7 +4,7 @@
 	Author Design: Samir Alley @samiralley | Tom Gooden @good3n
 	Author URI: http://www.revize.com/
 
-	Version 1.0.1 / November 5, 2015
+	Version 1.0.2 / November 5, 2015
 
 -----------------------------------------------------------------------------------*/ 
 
@@ -120,6 +120,10 @@ legend{display:block;font-weight:bold;font-size:13px}
 input[type="checkbox"]{display:inline}
 label span,
 legend span{font-weight:normal;font-size:13px;color:#444}
+::-webkit-input-placeholder{color:#777}
+:-moz-placeholder{color:#777}
+::-moz-placeholder{color:#777}
+:-ms-input-placeholder{color:#777}
 
 /* -----------------------------------------
 
