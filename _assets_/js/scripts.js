@@ -59,17 +59,17 @@
     $("#nav > li:has(ul)").addClass('first-parent').find("a:first").append('<i class="fa fa-angle-down down-arrow">');
 
 		// Menu Toggles 
-		$(".nav >li:has(ul)").find("a:first").append('<i class="fa fa-angle-down toggle">');
-		$(".nav li li:has(ul)").find("a:first").append('<i class="fa fa-angle-down toggle2">');
+		$("#nav >li:has(ul)").find("a:first").append('<i class="fa fa-angle-down toggle">');
+		$("#nav li li:has(ul)").find("a:first").append('<i class="fa fa-angle-down toggle2">');
 
 		function addNavClass() {
 			if ($window.width() < 992) {
-				$(".nav >li>ul").addClass('first-level');
-				$(".nav  li ul ul").addClass('second-level');      
+				$("#nav >li>ul").addClass('first-level');
+				$("#nav  li ul ul").addClass('second-level');      
 			
 			} else{
-					$(".nav >li>ul").removeClass('first-level').css('display','');
-					$(".nav  li ul ul").removeClass('second-level').css('display','');
+					$("#nav >li>ul").removeClass('first-level').css('display','');
+					$("#nav  li ul ul").removeClass('second-level').css('display','');
 			}
 		}
 		addNavClass();
