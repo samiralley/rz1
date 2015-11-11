@@ -80,7 +80,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
-.btn{border:0;color:#fff!important;display:inline-block;font-size:12px;font-weight:900!important;text-decoration:none;cursor:pointer;line-height:normal;padding:6px 14px;vertical-align:top;font-family:"Roboto",sans-serif;border-radius:0;letter-spacing:2px;text-transform:uppercase;padding:20px 30px;background:#0f99ee;transition:background .3s}
+.btn{border:0;color:#fff!important;display:inline-block;font-size:12px;font-weight:900!important;text-decoration:none;cursor:pointer;line-height:normal;padding:6px 14px;vertical-align:top;font-family:sans-serif;border-radius:0;letter-spacing:2px;text-transform:uppercase;padding:20px 30px;background:#0f99ee;transition:background .3s}
 .button:hover,
 a.button:hover,
 button:hover,
