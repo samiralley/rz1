@@ -162,7 +162,7 @@
      
 		// bxSlider 
     if(typeof $.fn.bxSlider !== "undefined"){
-		  $('#bxslider').bxSlider({
+		  $('.bxslider').bxSlider({
 			  mode:'fade',
 			  auto: true,
 			  pager: false
