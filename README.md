@@ -1,4 +1,4 @@
 # rz1
 Razor
 
-Version: 1.0.6
+Version: 1.0.7
