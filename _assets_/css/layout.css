@@ -230,7 +230,7 @@ body{overflow-x:hidden}
 .bxslider li,
 .bx-wrapper{height:100%!important}
 
-.bx-wrapper{position:relative;margin:0;padding:0;*zoom:1}
+.bx-wrapper{position:relative;margin:0;padding:0;*zoom:1;overflow:hidden}
 .bx-wrapper *{margin:0;padding:0}
 .bx-wrapper img{max-width:100%;display:block}
 
@@ -243,7 +243,7 @@ body{overflow-x:hidden}
 .bx-wrapper .bx-pager.bx-default-pager a.active{background:#000}
 
 /* direction controls */
-.bx-wrapper .bx-controls-direction a{width:32px;height:32px;margin:-20px 0 0;display:block;background:url(_assets_/images/slider-nav.png) no-repeat 0 0;position:absolute;top:50%;cursor:pointer;text-indent:-9999px;opacity:0;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}
+.bx-wrapper .bx-controls-direction a{width:32px;height:32px;margin:-20px 0 0;display:block;background:url(../images/slider-nav.png) no-repeat 0 0;position:absolute;z-index:51;top:50%;cursor:pointer;text-indent:-9999px;opacity:0;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}
 .bx-wrapper .bx-controls-direction a.disabled{display:none}
 .bx-wrapper .bx-prev{left:-40px}
 .bx-wrapper .bx-next{right:-40px;background-position:100% 0!important}
