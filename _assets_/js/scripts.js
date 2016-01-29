@@ -28,8 +28,8 @@
       document.createTextNode(
         '@-ms-viewport{width:auto!important}'
       )
-    )
-    document.querySelector('head').appendChild(msViewportStyle)
+    
+)    document.querySelector('head').appendChild(msViewportStyle)
   }
  	
 	// Preloader
@@ -169,11 +169,11 @@
 		  });
 		}
 
-		// Twiiter Feed
+		// Twitter Feed
     if(typeof $.fn.tweet !== "undefined"){
       $("#twitterfeed").tweet({
-        modpath: '/php/twitter/',        
-        username: "bhamgov",
+				modpath: '_assets_/plugins/twitter/',        
+        username: "RevizeSoftware",
         join_text: "auto",
         avatar_size: 0,
         count: 1,
@@ -182,7 +182,7 @@
         auto_join_text_ing: "",
         auto_join_text_reply: "",
         auto_join_text_url: "",
-        loading_text: "This only displays tweets on the live site"
+        loading_text: "Loading Tweet..."
       });
 		}
 
