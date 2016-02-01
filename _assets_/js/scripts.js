@@ -9,10 +9,10 @@
 
 (function($) {
 		 
-  'use strict';
+	'use strict';
 
-		var $window = $(window),
-				$body = $('body');
+	var $window = $(window),
+		$body = $('body');
 
 	/*!
 	 * IE10 viewport hack for Surface/desktop Windows 8 bug
@@ -22,31 +22,30 @@
 	
 	// See the Getting Started docs for more information:
 	// http://getbootstrap.com/getting-started/#support-ie10-width
-  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-    var msViewportStyle = document.createElement('style')
-    msViewportStyle.appendChild(
-      document.createTextNode(
-        '@-ms-viewport{width:auto!important}'
-      )
-    
-)    document.querySelector('head').appendChild(msViewportStyle)
-  }
- 	
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement('style');
+		msViewportStyle.appendChild(
+			document.createTextNode(
+			  '@-ms-viewport{width:auto!important}'
+			)
+		); document.querySelector('head').appendChild(msViewportStyle);
+	}
+	
 	// Preloader
 	$window.load(function() {           
 		setTimeout(function(){
-		  $body.addClass('loaded');
-		   $('#loader-wrapper').fadeOut();
+			$body.addClass('loaded');
+			 $('#loader-wrapper').fadeOut();
 		}, 600);
 	});
- 	
+	
 	$window.ready(function(){
 
 		// Search Toggle
 		$('#search-toggle').on('click',function(e){
 			$('#search').stop().slideToggle(200);
 			$(this).toggleClass('fa-search fa-close');
-		});		     
+		});
 
 		// Navigation Toggle
 		$("#nav-toggle").on("click", function(){
@@ -55,7 +54,7 @@
 		});
 
 		// Menu Arrows
-    $("#nav > li:has(ul)").addClass('first-parent').find("a:first").append('<i class="fa fa-angle-down down-arrow">');
+		$("#nav > li:has(ul)").addClass('first-parent').find("a:first").append('<i class="fa fa-angle-down down-arrow">');
 
 		// Menu Toggles 
 		$("#nav >li:has(ul)").find("a:first").append('<i class="fa fa-angle-down toggle">');
@@ -74,50 +73,38 @@
 		addNavClass();
 		$window.resize(addNavClass);
 	
-    $(".toggle").click(function(e) {
-			e.preventDefault();
-      if($(this).parent().next('.first-level').is(":visible")){
-        $(this).parent().next('.first-level').slideUp();
-      } else {
-	      e.preventDefault();
-        $(".first-level").slideUp("slow");
-        $(this).parent().next('.first-level').slideToggle();
-      }
-    });
+		$(".toggle").click(function(e) {
+				e.preventDefault();
+			if($(this).parent().next('.first-level').is(":visible")){
+				$(this).parent().next('.first-level').slideUp();
+			} else {
+				$(".first-level").slideUp("slow");
+				$(this).parent().next('.first-level').slideToggle();
+			}
+		});
 
-    $(".toggle2").click(function(e) {
-			e.preventDefault();
-      if($(this).parent().next('.second-level').is(":visible")){
-        $(this).parent().next('.second-level').slideUp();
-      } else {
-	      e.preventDefault();
-        $(".second-level").slideUp("slow");
-        $(this).parent().next('.second-level').slideToggle();
-      }
-    });
+		$(".toggle2").click(function(e) {
+				e.preventDefault();
+			if($(this).parent().next('.second-level').is(":visible")){
+				$(this).parent().next('.second-level').slideUp();
+			} else {
+				$(".second-level").slideUp("slow");
+				$(this).parent().next('.second-level').slideToggle();
+			}
+		});
 
-    // Add Class To Nav Items + Icons if Needed 
-    $('#nav> li:nth-child(1) >a').addClass('nav-item-one').prepend();
-    $('#nav> li:nth-child(2) >a').addClass('nav-item-two').prepend();
-    $('#nav> li:nth-child(3) >a').addClass('nav-item-three').prepend();
-    $('#nav> li:nth-child(4) >a').addClass('nav-item-four').prepend();
-    $('#nav> li:nth-child(5) >a').addClass('nav-item-five').prepend();
-    $('#nav> li:nth-child(6) >a').addClass('nav-item-six').prepend();
+		// Add Class To Nav Items + Icons if Needed 
+		$('#nav> li:nth-child(1) >a').addClass('nav-item-one').prepend();
+		$('#nav> li:nth-child(2) >a').addClass('nav-item-two').prepend();
+		$('#nav> li:nth-child(3) >a').addClass('nav-item-three').prepend();
+		$('#nav> li:nth-child(4) >a').addClass('nav-item-four').prepend();
+		$('#nav> li:nth-child(5) >a').addClass('nav-item-five').prepend();
+		$('#nav> li:nth-child(6) >a').addClass('nav-item-six').prepend();
 		$('#nav> li:nth-child(7) >a').addClass('nav-item-seven').prepend();
-
-		// Mega Footer Toggle
-    $('.header-toggle').click(function () {
-	    var inner = $(this).next('.inner-toggle');
-	    if (inner.is(':hidden')) {
-	        inner.slideDown('200');
-	    } else {
-	        inner.slideUp('200');
-	    }        
-    });
 
 		// Flyout
 		var flyout = $('#flyout'),
-		    flyoutwrap = $('#flyout-wrap');
+			flyoutwrap = $('#flyout-wrap');
 
 		if (flyout.text().length){
 			flyoutwrap.prepend('<div id="flyout-toggle"><i class="fa fa-bars"></i> Sub Menu</div>');
@@ -133,16 +120,25 @@
 		
 		var flyoutChildren = $('.flyout-children');
 
-    $(".toggle-children").click(function(e) {
-			e.preventDefault();
-      if($(this).parent().next(flyoutChildren).is(":visible")){
-        $(this).parent().next(flyoutChildren).slideUp();
-      } else {
-	      e.preventDefault();
-        $(flyoutChildren).slideUp("slow");
-        $(this).parent().next(flyoutChildren).slideToggle();
-      }
-    });
+		$(".toggle-children").click(function(e) {
+				e.preventDefault();
+			if($(this).parent().next(flyoutChildren).is(":visible")){
+				$(this).parent().next(flyoutChildren).slideUp();
+			} else {
+				$(flyoutChildren).slideUp("slow");
+				$(this).parent().next(flyoutChildren).slideToggle();
+			}
+		});
+
+		// Mega Footer Toggle
+		$('.header-toggle').click(function () {
+			var inner = $(this).next('.inner-toggle');
+			if (inner.is(':hidden')) {
+				inner.slideDown('200');
+			} else {
+				inner.slideUp('200');
+			}
+		});
 
 		// Tabs
 		$('#tabs li a').click(function(e){
@@ -153,62 +149,62 @@
 
 			e.preventDefault();
 			$(currentTab).addClass('current animated fadeInLeft');
-		});					  
+		});
 
 		// Owl Slider
-    if(typeof $.fn.owlCarousel !== "undefined"){
+		if(typeof $.fn.owlCarousel !== "undefined"){
 			$("#owl-slider").owlCarousel();
-     }
-     
+		}
+	 
 		// bxSlider 
-    if(typeof $.fn.bxSlider !== "undefined"){
-		  $('.bxslider').bxSlider({
-			  mode:'fade',
-			  auto: true,
-			  pager: false
-		  });
+		if(typeof $.fn.bxSlider !== "undefined"){
+			$('.bxslider').bxSlider({
+				mode:'fade',
+				auto: true,
+				pager: false
+			});
 		}
 
 		// Twitter Feed
-    if(typeof $.fn.tweet !== "undefined"){
-      $("#twitterfeed").tweet({
+		if(typeof $.fn.tweet !== "undefined"){
+			$("#twitterfeed").tweet({
 				modpath: '_assets_/plugins/twitter/',        
-        username: "RevizeSoftware",
-        join_text: "auto",
-        avatar_size: 0,
-        count: 1,
-        auto_join_text_default: "",
-        auto_join_text_ed: "",
-        auto_join_text_ing: "",
-        auto_join_text_reply: "",
-        auto_join_text_url: "",
-        loading_text: "Loading Tweet..."
-      });
+				username: "RevizeSoftware",
+				join_text: "auto",
+				avatar_size: 0,
+				count: 1,
+				auto_join_text_default: "",
+				auto_join_text_ed: "",
+				auto_join_text_ing: "",
+				auto_join_text_reply: "",
+				auto_join_text_url: "",
+				loading_text: "Loading Tweet..."
+			});
 		}
 
 		// Instafeed Feed
-    if(typeof $.fn.Instafeed !== "undefined"){
-	    var userFeed = new Instafeed({
-	        get: 'user',
-	        resolution:'standard_resolution',
-	        limit:9,
-	        userId: 223202806,
-	        accessToken: '303202123.f7e9b72.27c687fbd9c24ecbb29dc92951cdf724'
-	    });
-	    userFeed.run();
+		if(typeof $.fn.Instafeed !== "undefined"){
+			var userFeed = new Instafeed({
+				get: 'user',
+				resolution:'standard_resolution',
+				limit:9,
+				userId: 223202806,
+				accessToken: '303202123.f7e9b72.27c687fbd9c24ecbb29dc92951cdf724'
+			});
+			userFeed.run();
 		}
 
 		// Sticky
-    if(typeof $.fn.sticky !== "undefined"){
-	     $("#sticky").sticky({
-	     	topSpacing:0
-	     });
+		if(typeof $.fn.sticky !== "undefined"){
+			$("#sticky").sticky({
+				topSpacing:0
+			});
 		}
 
-		// Revolution Slider
-  //   if(typeof $.fn.revolution !== "undefined"){
-		// 	$('.tp-banner').show().revolution(
-		// 	{
+		// // Revolution Slider
+  //   	if(typeof $.fn.revolution !== "undefined"){
+		// 	$('.tp-banner').show().revolution({
+				
 		// 		dottedOverlay:"none",
 		// 		delay:6000,
 		// 		startwidth:1170,
@@ -285,147 +281,146 @@
 											
 		// }
 
-    // Animations http://www.oxygenna.com/tutorials/scroll-animations-using-waypoints-js-animate-css
-	  function onScrollInit( items, trigger ) {
-	    items.each( function() {
-	      var osElement = $(this),
-	          osAnimationClass = osElement.data('os-animation'),
-	          osAnimationDelay = osElement.data('os-animation-delay');
-	        
-	          osElement.css({
-	            '-moz-animation-delay':     osAnimationDelay,
-	            'animation-delay':          osAnimationDelay,
-	            '-webkit-animation-delay':  osAnimationDelay
-	          });
+		// Animations http://www.oxygenna.com/tutorials/scroll-animations-using-waypoints-js-animate-css
+		function onScrollInit( items, trigger ) {
+			items.each( function() {
+				var osElement = $(this),
+					osAnimationClass = osElement.data('os-animation'),
+					osAnimationDelay = osElement.data('os-animation-delay');
+				
+				osElement.css({
+					'-moz-animation-delay':     osAnimationDelay,
+					'animation-delay':          osAnimationDelay,
+					'-webkit-animation-delay':  osAnimationDelay
+				});
 	
-	          var osTrigger = ( trigger ) ? trigger : osElement;
+				var osTrigger = ( trigger ) ? trigger : osElement;
 	
-	        if(typeof $.fn.waypoint !== "undefined"){ 
-	          osTrigger.waypoint(function() {
-	            osElement.addClass('animated').addClass(osAnimationClass);
-	            },{
-	                triggerOnce: true,
-	                offset: '100%'
-	          });
-	        }
-	    });
-	  }
-	
-	  onScrollInit($('.os-animation'));
+				if(typeof $.fn.waypoint !== "undefined"){ 
+					osTrigger.waypoint(function() {
+						osElement.addClass('animated').addClass(osAnimationClass);
+					},{
+						triggerOnce: true,
+						offset: '100%'
+					});
+				}
+			});
+		}
+		onScrollInit($('.os-animation'));
 
 		//#Smooth Scrolling
-	  $('a[href*=#]:not([href=#])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      if (target.length) {
-	        $('html,body').animate({
-	          scrollTop: target.offset().top
-	        }, 1000);
-	        return false;
-	      }
-	    }
-	  });
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
 
-	/*global jQuery */
-	/*!
-	* FlexVerticalCenter.js 1.0
-	*
-	* Copyright 2011, Paul Sprangers http://paulsprangers.com
-	* Released under the WTFPL license
-	* http://sam.zoy.org/wtfpl/
-	*
-	* Date: Fri Oct 28 19:12:00 2011 +0100
-	*/
-  $.fn.flexVerticalCenter = function( options ) {
-    var settings = $.extend({
-      cssAttribute:   'margin-top', // the attribute to apply the calculated value to
-      verticalOffset: 0,            // the number of pixels to offset the vertical alignment by
-      parentSelector: null,         // a selector representing the parent to vertically center this element within
-      debounceTimeout: 25,          // a default debounce timeout in milliseconds
-      deferTilWindowLoad: false     // if true, nothing will take effect until the $(window).load event
-    }, options || {});
+		/*global jQuery */
+		/*!
+		* FlexVerticalCenter.js 1.0
+		*
+		* Copyright 2011, Paul Sprangers http://paulsprangers.com
+		* Released under the WTFPL license
+		* http://sam.zoy.org/wtfpl/
+		*
+		* Date: Fri Oct 28 19:12:00 2011 +0100
+		*/
+		$.fn.flexVerticalCenter = function( options ) {
+			var settings = $.extend({
+				cssAttribute:   'margin-top', // the attribute to apply the calculated value to
+				verticalOffset: 0,            // the number of pixels to offset the vertical alignment by
+				parentSelector: null,         // a selector representing the parent to vertically center this element within
+				debounceTimeout: 25,          // a default debounce timeout in milliseconds
+				deferTilWindowLoad: false     // if true, nothing will take effect until the $(window).load event
+			}, options || {});
 
-    return this.each(function(){
-      var $this   = $(this); // store the object
-      var debounce;
+			return this.each(function(){
+				var $this   = $(this); // store the object
+				var debounce;
 
-      // recalculate the distance to the top of the element to keep it centered
-      var resizer = function () {
+				// recalculate the distance to the top of the element to keep it centered
+				var resizer = function () {
 
-        var parentHeight = (settings.parentSelector && $this.parents(settings.parentSelector).length) ?
-          $this.parents(settings.parentSelector).first().height() : $this.parent().height();
+					var parentHeight = (settings.parentSelector && $this.parents(settings.parentSelector).length) ?
+						$this.parents(settings.parentSelector).first().height() : $this.parent().height();
 
-        $this.css(
-          settings.cssAttribute, ( ( ( parentHeight - $this.height() ) / 2 ) + parseInt(settings.verticalOffset) )
-        );
-      };
+					$this.css(
+						settings.cssAttribute, ( ( ( parentHeight - $this.height() ) / 2 ) + parseInt(settings.verticalOffset) )
+					);
+				};
 
-      // Call on resize. Opera debounces their resize by default.
-      $(window).resize(function () {
-          clearTimeout(debounce);
-          debounce = setTimeout(resizer, settings.debounceTimeout);
-      });
+				// Call on resize. Opera debounces their resize by default.
+				$(window).resize(function () {
+					clearTimeout(debounce);
+					debounce = setTimeout(resizer, settings.debounceTimeout);
+				});
 
-      if (!settings.deferTilWindowLoad) {
-        // call it once, immediately.
-        resizer();
-      }
+				if (!settings.deferTilWindowLoad) {
+					// call it once, immediately.
+					resizer();
+				}
 
-      // Call again to set after window (frames, images, etc) loads.
-      $(window).load(function () {
-          resizer();
-      });
+				// Call again to set after window (frames, images, etc) loads.
+				$(window).load(function () {
+					resizer();
+				});
 
-    });
+			});
 
-  };
+		};
+		$('.v-align').flexVerticalCenter();
 
-  $('.v-align').flexVerticalCenter();
-
-  }); // Ready
+	}); // Ready
   
 })(jQuery);
 
-	// Equal heights
-	/* Thanks to CSS Tricks for pointing out this bit of jQuery
-	http://css-tricks.com/equal-height-blocks-in-rows/
-	It's been modified into a function called at page load and then each time the page is resized. One large modification was to remove the set height before each new calculation. */
-	equalheight = function(container){
-
+// Equal heights
+/* Thanks to CSS Tricks for pointing out this bit of jQuery
+http://css-tricks.com/equal-height-blocks-in-rows/
+It's been modified into a function called at page load and then each time the page is resized. One large modification was to remove the set height before each new calculation. */
+var equalheight = function(container){
 	var currentTallest = 0,
-	     currentRowStart = 0,
-	     rowDivs = new Array(),
-	     $el,
-	     topPosition = 0;
-	 $(container).each(function() {
+		currentRowStart = 0,
+		rowDivs = new Array(),
+		$el,
+		currentDiv,
+		topPosition = 0;
 
-	   $el = $(this);
-	   $($el).height('auto')
-	   topPostion = $el.position().top;
+	$(container).each(function() {
+		$el = $(this);
+		$el.height('auto');
+		topPosition = $el.position().top;
 
-	   if (currentRowStart != topPostion) {
-	     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-	       rowDivs[currentDiv].height(currentTallest);
-	     }
-	     rowDivs.length = 0; // empty the array
-	     currentRowStart = topPostion;
-	     currentTallest = $el.height();
-	     rowDivs.push($el);
-	   } else {
-	     rowDivs.push($el);
-	     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
-	  }
-	   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
-	     rowDivs[currentDiv].height(currentTallest);
-	   }
-	 });
-	}
+		if (currentRowStart != topPosition) {
+			for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+				rowDivs[currentDiv].height(currentTallest);
+			}
+			rowDivs.length = 0; // empty the array
+			currentRowStart = topPosition;
+			currentTallest = $el.height();
+			rowDivs.push($el);
+		} else {
+			rowDivs.push($el);
+			currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+		}
 
-	$(window).load(function() {
-	  equalheight('.equal');
+		for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+			rowDivs[currentDiv].height(currentTallest);
+		}
 	});
+}
 
-	$(window).resize(function(){
-	  equalheight('.equal');
-	});
+$(window).load(function() {
+	equalheight('.equal');
+});
+
+$(window).resize(function(){
+	equalheight('.equal');
+});
