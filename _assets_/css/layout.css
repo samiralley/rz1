@@ -229,9 +229,9 @@ body{overflow-x:hidden}
 .flyout ul{display:none;margin:0;padding:0}
 .flyout li li a{font-size:13px;padding:10px 10px 10px 10px}
 
-.breadcrumbs{font-size:13px;text-transform:capitalize;font-weight:bold;color:#fff;position:absolute;bottom:30px;z-index:99;width:100%;font-family:sans-serif;text-shadow:0 1px 0 #34576e}
-.breadcrumbs p{margin:0;font-size:13px}
-.breadcrumbs a{color:#ffc140;text-decoration:none;font-size:13px}
+.breadcrumbs{font-size:13px;text-transform:capitalize}
+.breadcrumbs p{margin:0}
+.breadcrumbs a{text-decoration:none}
 .breadcrumbs i{font-size:13px;margin:0 4px}
 
 /* -----------------------------------------
