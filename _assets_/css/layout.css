@@ -203,6 +203,8 @@ form.loginform label input{display:block;margin-bottom:10px;width:100%;box-sizin
 body{overflow-x:hidden}
 .text-overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
+#nav-toggle,.toggle,.toggle2{display:none}
+
 /* -----------------------------------------
 
 #inner
