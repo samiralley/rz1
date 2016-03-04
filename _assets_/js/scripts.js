@@ -89,9 +89,11 @@
 				e.preventDefault();
 			if($(this).parent().next('.second-level').is(":visible")){
 				$(this).parent().next('.second-level').slideUp();
+				$(this).parent().removeClass('active-toggle');
 			} else {
 				$(".second-level").slideUp("slow");
 				$(this).parent().next('.second-level').slideToggle();
+				$(this).parent().addClass('active-toggle');
 			}
 		});
 
