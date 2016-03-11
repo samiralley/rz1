@@ -202,18 +202,21 @@ form.loginform label input{display:block;margin-bottom:10px;width:100%;box-sizin
 -----------------------------------------*/ 
 body{overflow-x:hidden}
 .text-overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#nav-toggle,
+.toggle,
+.toggle2{display:none}
 
 /* -----------------------------------------
 
 #inner
 
 -----------------------------------------*/ 
-.flyout{margin:0;padding:0}
-.flyout li{margin:0;display:block;position:relative}
-.flyout a{text-decoration:none;padding:15px 20px;display:block;border-bottom:1px solid #e7e9ea}
-.flyout ul{display:none;margin:0;padding:0;background:#000}
-.flyout ul a{font-size:13px;padding:10px 15px;width:180px}
-.flyout li:hover > ul{display:block}
+#flyout{margin:0;padding:0}
+#flyout li{margin:0;display:block;position:relative}
+#flyout a{text-decoration:none;padding:15px 20px;display:block;border-bottom:1px solid #000}
+#flyout ul{display:none;position:absolute;top:0;left:100%;margin:0;padding:0;background:#aaa}
+#flyout ul a{font-size:13px;padding:10px 15px;width:180px}
+#flyout li:hover > ul{display:block}
 
 .breadcrumbs{font-size:13px;text-transform:capitalize}
 .breadcrumbs p{margin:0}
@@ -268,6 +271,29 @@ body{overflow-x:hidden}
 	#formwizziwmorf tr,#formwizziwmorf tr td{display:block!important}
 	#formwizziwmorf tr table tr{display:table-row!important}
 	#formwizziwmorf tr table td{display:table-cell!important}
+
+	.toggle,
+	.toggle2,
+	#nav-toggle{display:inline-block;cursor:pointer}
+	.down-arrow{display:none} /* if not hidden above */
+	#nav{display:none}
+	#nav li{float:none;display:block}
+	#nav li a{padding:20px 30px;line-height:1;border-bottom:1px solid rgba(0,0,0,.2);background:none;font-size:14px}
+	#nav ul{position:static;top:0;padding:0;background:rgba(0,0,0,.2)}
+	#nav li:hover > ul{display:none}
+	#nav ul a{width:100%}
+	#nav ul ul{left:0}
+	#nav .toggle,
+	#nav .toggle2{position:absolute;right:0;top:0;background:rgba(0,0,0,.2);height:55px;width:55px;line-height:55px;text-align:center}
+	#nav li li:hover > a{background:none;color:#fff}
+	#nav li a.active-toggle{color:#fff000}
+
+	#flyout{display:none}
+	#flyout li{}
+	#flyout li a{padding:20px 30px;line-height:1;border-bottom:1px solid rgba(0,0,0,.2);background:none;font-size:14px}}
+	#flyout ul{position:static;left:0;padding:0;background:rgba(0,0,0,.2)}
+	#flyout ul a{width:100%}
+	#flyout li:hover > ul{display:none}
 
 }
 
