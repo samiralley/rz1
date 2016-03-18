@@ -77,11 +77,9 @@
 				e.preventDefault();
 			if($(this).parent().next('.first-level').is(":visible")){
 				$(this).parent().next('.first-level').slideUp();
-				$(this).parent().removeClass('active-toggle');
 			} else {
 				$(".first-level").slideUp("slow");
 				$(this).parent().next('.first-level').slideToggle();
-				$(this).parent().addClass('active-toggle');
 			}
 		});
 
@@ -89,11 +87,9 @@
 				e.preventDefault();
 			if($(this).parent().next('.second-level').is(":visible")){
 				$(this).parent().next('.second-level').slideUp();
-				$(this).parent().removeClass('active-toggle');
 			} else {
 				$(".second-level").slideUp("slow");
 				$(this).parent().next('.second-level').slideToggle();
-				$(this).parent().addClass('active-toggle');
 			}
 		});
 

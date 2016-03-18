@@ -286,7 +286,6 @@ body{overflow-x:hidden}
 	#nav .toggle,
 	#nav .toggle2{position:absolute;right:0;top:0;background:rgba(0,0,0,.2);height:55px;width:55px;line-height:55px;text-align:center}
 	#nav li li:hover > a{background:none;color:#fff}
-	#nav li a.active-toggle{color:#fff000}
 
 	#flyout{display:none}
 	#flyout li{}
