@@ -171,7 +171,7 @@
 		if(typeof $.fn.bxSlider !== "undefined"){
 			$('.bxslider').bxSlider({
 				mode:'fade',
-				auto: true,
+				auto:($('.bxslider').children().length < 2) ? false : true,
 				pager: false
 			});
 		}
