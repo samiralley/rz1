@@ -77,11 +77,9 @@
 				e.preventDefault();
 			if($(this).parent().next('.first-level').is(":visible")){
 				$(this).parent().next('.first-level').slideUp();
-				$(this).parent().removeClass('active-toggle');
 			} else {
 				$(".first-level").slideUp("slow");
 				$(this).parent().next('.first-level').slideToggle();
-				$(this).parent().addClass('active-toggle');
 			}
 		});
 
@@ -89,11 +87,9 @@
 				e.preventDefault();
 			if($(this).parent().next('.second-level').is(":visible")){
 				$(this).parent().next('.second-level').slideUp();
-				$(this).parent().removeClass('active-toggle');
 			} else {
 				$(".second-level").slideUp("slow");
 				$(this).parent().next('.second-level').slideToggle();
-				$(this).parent().addClass('active-toggle');
 			}
 		});
 
@@ -175,7 +171,7 @@
 		if(typeof $.fn.bxSlider !== "undefined"){
 			$('.bxslider').bxSlider({
 				mode:'fade',
-				auto: true,
+				auto:($('.bxslider').children().length < 2) ? false : true,
 				pager: false
 			});
 		}
@@ -215,86 +211,6 @@
 				topSpacing:0
 			});
 		}
-
-		// // Revolution Slider
-  //   	if(typeof $.fn.revolution !== "undefined"){
-		// 	$('.tp-banner').show().revolution({
-				
-		// 		dottedOverlay:"none",
-		// 		delay:6000,
-		// 		startwidth:1170,
-		// 		startheight:800,
-		// 		hideThumbs:200,
-				
-		// 		thumbWidth:100,
-		// 		thumbHeight:50,
-		// 		thumbAmount:5,
-				
-		// 		navigationType:"none",
-		// 		navigationArrows:"solo",
-		// 		navigationStyle:"preview1",
-				
-		// 		touchenabled:"on",
-		// 		onHoverStop:"off",
-				
-		// 		swipe_velocity: 0.7,
-		// 		swipe_min_touches: 1,
-		// 		swipe_max_touches: 1,
-		// 		drag_block_vertical: false,
-										
-		// 		parallax:"scroll",
-		// 		parallaxBgFreeze:"on",
-		// 		parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
-										
-		// 		keyboardNavigation:"off",
-				
-		// 		navigationHAlign:"center",
-		// 		navigationVAlign:"bottom",
-		// 		navigationHOffset:0,
-		// 		navigationVOffset:20,
-
-		// 		soloArrowLeftHalign:"left",
-		// 		soloArrowLeftValign:"center",
-		// 		soloArrowLeftHOffset:20,
-		// 		soloArrowLeftVOffset:0,
-
-		// 		soloArrowRightHalign:"right",
-		// 		soloArrowRightValign:"center",
-		// 		soloArrowRightHOffset:20,
-		// 		soloArrowRightVOffset:0,
-						
-		// 		shadow:0,
-		// 		fullWidth:"off",
-		// 		fullScreen:"on",
-
-		// 		spinner:"spinner4",
-				
-		// 		stopLoop:"off",
-		// 		stopAfterLoops:-1,
-		// 		stopAtSlide:-1,
-
-		// 		shuffle:"off",
-				
-		// 		autoHeight:"on",						
-		// 		forceFullWidth:"on",
-										
-		// 		hideThumbsOnMobile:"off",
-		// 		hideNavDelayOnMobile:1500,						
-		// 		hideBulletsOnMobile:"off",
-		// 		hideArrowsOnMobile:"off",
-		// 		hideThumbsUnderResolution:0,
-				
-		// 		hideSliderAtLimit:0,
-		// 		hideCaptionAtLimit:0,
-		// 		hideAllCaptionAtLilmit:0,
-		// 		startWithSlide:0
-				
-		// 		//fullScreenOffsetContainer: ".q-btns",
-		// 		//fullScreenOffset:"70px"
-						
-		// 	});
-											
-		// }
 
 		// Animations http://www.oxygenna.com/tutorials/scroll-animations-using-waypoints-js-animate-css
 		function onScrollInit( items, trigger ) {
