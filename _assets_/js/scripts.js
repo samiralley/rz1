@@ -130,6 +130,23 @@
 			}
 		});
 
+		// simpleWeather
+		if( typeof $.simpleWeather !== "undefined" ){
+			$.simpleWeather({
+				location: 'Arkansas City, KS',
+				unit: 'f',
+				success: function(weather) {
+					var html = '<span>'+weather.forecast[0].day+', '+weather.forecast[0].date+'</span>&nbsp;&nbsp;&nbsp;<span class="forecast">'+weather.temp+' '+weather.forecast[0].text+'&deg;</span>';
+					html += '<i class="icon-'+weather.code+'"></i>';
+
+					$("#weather").html(html);
+				},
+				error: function(error) {
+					$("#weather").html("<p>"+error+"</p>");
+				}
+			});
+		}
+
 		// Mega Footer Toggle
 		$('.header-toggle').click(function () {
 			var inner = $(this).next('.inner-toggle');
