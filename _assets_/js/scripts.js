@@ -43,7 +43,9 @@
 
 		 if(RZ.login){
 		  $body.addClass("user-logged-in");
-		 } 
+		 } else{
+			 $body.addClass("user-not-logged-in");
+		 }
 		 
 		// Search Toggle
 		$('#search-toggle').on('click',function(e){
