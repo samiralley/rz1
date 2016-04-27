@@ -41,6 +41,10 @@
 	
 	$window.ready(function(){
 
+		 if(RZ.login){
+		  $body.addClass("user-logged-in");
+		 } 
+		 
 		// Search Toggle
 		$('#search-toggle').on('click',function(e){
 			$('#search').stop().slideToggle(200);
