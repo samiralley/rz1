@@ -64,7 +64,7 @@ p a,p a:visited{line-height:inherit}
 #lists
 
 -----------------------------------------*/ 
-ul,ol{margin-bottom:20px;margin-left:30px}
+ul,ol{margin-bottom:20px;margin-left:10px}
 ul{list-style:disc}
 ol{list-style:decimal}
 ul ul,ul ol,
@@ -280,6 +280,8 @@ body{overflow-x:hidden}
 
 @media only screen and (max-width:991px) {
 
+	html,body,.main-wrap{overflow-y:scroll;-webkit-overflow-scrolling:touch}
+
 	/* rz citizens request center */
 	#formwizziwmorf tr,#formwizziwmorf tr td{display:block!important}
 	#formwizziwmorf tr table tr{display:table-row!important}
@@ -312,10 +314,10 @@ body{overflow-x:hidden}
 	/* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width:767px) {
 
-	.floating-alert{width:auto;right:15px;left:15px}
+	.floating-alert{width:auto;right:0;left:0;border:0;bottom:0;border-radius:0;padding-left:15px;padding-right:15px}
 	.floating-alert{font-size:12px}
-	.floating-alert h4{margin-bottom:10px}
-	.floating-alert .btn{font-size:10px}
+	.floating-alert h4{margin-bottom:10px;font-size:14px}
+	.floating-alert .btn{font-size:10px;padding:7px 12px!important}
 
 }
 
@@ -328,7 +330,8 @@ body{overflow-x:hidden}
 @media print { 
 	.nav-wrap,
 	.sidebar,
-	.breadcrumbs,
+	#flyout-wrap,
+	.breadcrumbs
 	.e-notify{display:none!important}
 	a[href]:after{content:none!important}
 }
