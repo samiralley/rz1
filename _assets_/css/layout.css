@@ -88,12 +88,12 @@ a img{border:none}
 img[align="right"],
 img[style*="float: right"],
 img[style*="float:right"]{
-  margin: 0 20px 15px 0px;
+  margin: 0 0 20px 20px;
 }
 img[align="left"],
 img[style*="float: left"],
 img[style*="float:left"]{
-  margin: 0 20px 10px 0;
+  margin: 0 20px 20px 0;
 }
 
 /* -----------------------------------------
