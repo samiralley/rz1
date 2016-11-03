@@ -161,6 +161,56 @@
 
 </div><!-- /.main-wrap -->  
 
+
+<!-- Share widget make into an include file -->
+<button type="button" class="share-btn floating-share-btn" data-toggle="modal" data-target="#shareModal">
+  <i class="fa fa-share-alt"></i>
+</button>
+
+<div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModal">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Share this page</h4>
+      </div>
+      <div class="modal-body">
+	      <div class="copylink">
+		      <p>Copy and past this code into your website.</p>
+		      <pre>&lt;a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>">Your Link Name&lt;/a&gt;</pre>
+	      </div><!-- /.copylink -->
+				<div class="share-btns">
+		      <p>Share this page on your favorite Social network</p>
+		      <div class="row">
+			      <div class="col-md-3 col-xs-6">
+							<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" class="btn-facebook" target="_blank">
+								<i class="fa fa-facebook"></i> Facebook
+							</a>
+						</div>
+			      <div class="col-md-3 col-xs-6">
+							<a href="https://www.twitter.com/home?status=<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" class="btn-twitter" target="new">
+								<i class="fa fa-twitter"></i> Twitter
+							</a>
+						</div>							
+			      <div class="col-md-3 col-xs-6">
+						<a href="https://www.plus.google.com/share?url=<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" class="btn-google" target="new">
+							<i class="fa fa-google-plus"></i> Google Plus
+						</a>
+						</div>						
+			      <div class="col-md-3 col-xs-6">
+						<a href="https://www.reddit.com/submit?url=<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" class="btn-reddit" target="new">
+							<i class="fa fa-reddit"></i> Reddit
+						</a>
+						</div>
+					</div><!-- /.row -->
+	      </div><!-- /.share-btns -->
+      <button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Close</button>
+    </div>
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Share widget make into an include file -->
+
+
 <script src="_assets_/js/jquery.min.js"></script>
 <script src="_assets_/plugins/modernizr/modernizr.custom.js"></script>
 <script src="_assets_/plugins/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
@@ -173,15 +223,6 @@
 <script src="_assets_/plugins/simpleWeather/jquery.simpleWeather.min.js"></script>
 <script src="_assets_/plugins/waypoints/waypoints.min.js"></script>
 <script src="_assets_/js/scripts.js"></script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5113ea471e44f9dd"></script>
-<script type="text/javascript">
-  addthis.layers({
-    'theme' : 'transparent',
-    'share' : {
-      'position' : 'right',
-      'numPreferredServices' : 6
-    }   
-  });
-</script>
+
 </body>
 </html>
