@@ -168,7 +168,7 @@
 </button>
 
 <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModal">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog modal-lg" role="share">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -177,31 +177,31 @@
       <div class="modal-body">
 	      <div class="copylink">
 		      <p>Copy and past this code into your website.</p>
-		      <pre>&lt;a href="<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>">Your Link Name&lt;/a&gt;</pre>
+		      <pre>&lt;a href="http://cms5.revize.com/revize/troymi/">Your Link Name&lt;/a&gt;</pre>
 	      </div><!-- /.copylink -->
 				<div class="share-btns">
 		      <p>Share this page on your favorite Social network</p>
 		      <div class="row">
 			      <div class="col-md-3 col-xs-6">
-							<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" class="btn-facebook" onclick="return !window.open(this.href, 'facebook ', 'width=500,height=500')"
+							<a href="https://www.facebook.com/sharer/sharer.php?u=http://cms5.revize.com/revize/troymi/" class="btn-facebook" onclick="return !window.open(this.href, 'facebook ', 'width=500,height=500')"
     target="_blank">
 								<i class="fa fa-facebook"></i> Facebook
 							</a>
 						</div>
 			      <div class="col-md-3 col-xs-6">
-							<a href="https://www.twitter.com/home?status=<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" class="btn-twitter" onclick="return !window.open(this.href, 'twitter ', 'width=500,height=500')"
+							<a href="https://www.twitter.com/home?status=http://cms5.revize.com/revize/troymi/" class="btn-twitter" onclick="return !window.open(this.href, 'twitter ', 'width=500,height=500')"
     target="_blank">
 								<i class="fa fa-twitter"></i> Twitter
 							</a>
 						</div>							
 			      <div class="col-md-3 col-xs-6">
-						<a href="https://www.plus.google.com/share?url=<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" class="btn-google" onclick="return !window.open(this.href, 'google ', 'width=500,height=500')"
+						<a href="https://www.plus.google.com/share?url=http://cms5.revize.com/revize/troymi/" class="btn-google" onclick="return !window.open(this.href, 'google ', 'width=500,height=500')"
     target="_blank">
 							<i class="fa fa-google-plus"></i> Google Plus
 						</a>
 						</div>						
 			      <div class="col-md-3 col-xs-6">
-						<a href="https://www.reddit.com/submit?url=<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" class="btn-reddit" onclick="return !window.open(this.href, 'redit ', 'width=500,height=500')"
+						<a href="https://www.reddit.com/submit?url=http://cms5.revize.com/revize/troymi/" class="btn-reddit" onclick="return !window.open(this.href, 'redit ', 'width=500,height=500')"
     target="_blank">
 							<i class="fa fa-reddit"></i> Reddit
 						</a>
@@ -209,11 +209,11 @@
 					</div><!-- /.row -->
 	      </div><!-- /.share-btns -->
       <button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Close</button>
-    </div>
-  </div><!-- /.modal-dialog -->
+    </div><!-- /.modal-body -->
+	  </div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <!-- Share widget make into an include file -->
-
 
 <script src="_assets_/js/jquery.min.js"></script>
 <script src="_assets_/plugins/modernizr/modernizr.custom.js"></script>
