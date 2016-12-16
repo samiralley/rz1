@@ -154,6 +154,7 @@ legend span{font-weight:normal;font-size:13px;color:#444}
 ::-moz-placeholder{color:#777}
 :-ms-input-placeholder{color:#777}
 .gsc-control-cse *{box-sizing:content-box}
+iframe{border:0}
 
 /* -----------------------------------------
 
